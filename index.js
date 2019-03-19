@@ -2,9 +2,13 @@
 var fs = require('fs');
 var path = require('path');
 
-function requireNativeModule(name, debug) {
+function requireNativeModule(name, debug, searchPath) {
+  if (searchPath === undefined)
+  {
+    searchPath = path.dirname(module.parent.filename)
+  }
   // Search relative to the file that included this one
-  var base = path.dirname(module.parent.filename);
+  var base = path.resolve(searchPath);
   
   // Suffixes to search for (in each mode)
   // Both are used, debug just changes which is tried first
