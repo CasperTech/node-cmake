@@ -1,5 +1,5 @@
 {
-  "name": "node-cmake",
+  "name": "@caspertech/node-cmake",
   "author": "Colin Taylor <cjntaylor@gmail.com>",
   "version": "2.5.1",
   "description": "A CMake-based build system for node.js native modules",
